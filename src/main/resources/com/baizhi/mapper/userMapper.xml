@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.UserDAO">
+    <select id="showFirstMan" resultType="java.lang.Integer">
+        select count(*)
+        from c_user
+        where (DATEDIFF(now(), u_create_date) between 0 and 6)
+          and sex = "男"
+    </select>
+    <select id="showFirstWoMan" resultType="java.lang.Integer">
+        select count(*)
+        from c_user
+        where (DATEDIFF(now(), u_create_date) between 0 and 6)
+          and sex = "女"
+    </select>
+    <select id="showSecondMan" resultType="java.lang.Integer">
+        select count(*)
+        from c_user
+        where (DATEDIFF(now(), u_create_date) between 7 and 13)
+          and sex = "男"
+    </select>
+    <select id="showSecondWoMan" resultType="java.lang.Integer">
+        select count(*)
+        from c_user
+        where (DATEDIFF(now(), u_create_date) between 7 and 13)
+          and sex = "女"
+    </select>
+    <select id="showThirdWoMan" resultType="java.lang.Integer">
+        select count(*)
+        from c_user
+        where (DATEDIFF(now(), u_create_date) between 14 and 21)
+          and sex = "女"
+    </select>
+    <select id="showThirdMan" resultType="java.lang.Integer">
+        select count(*)
+        from c_user
+        where (DATEDIFF(now(), u_create_date) between 14 and 21)
+          and sex = "男"
+    </select>
+</mapper>
