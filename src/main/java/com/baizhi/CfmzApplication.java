@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 public class CfmzApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CfmzApplication.class, argssssxsss);
+        SpringApplication.run(CfmzApplication.class, args);
     }
 
 }
